@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Design tokens — Hadassah Creations Concept
+   Royal purple · turquoise · golden yellow · cream · deep charcoal
+   ========================================================================== */
+
+:root {
+  /* brand */
+  --purple-50: #f6f3ff;
+  --purple-100: #ede9fe;
+  --purple-200: #ddd6fe;
+  --purple-300: #c4b5fd;
+  --purple-400: #a78bfa;
+  --purple-500: #8b5cf6;
+  --purple-600: #7c3aed;
+  --purple-700: #6d28d9;
+  --purple-800: #5b21b6;
+  --purple-900: #4c1d95;
+  --purple-950: #2e1065;
+
+  --teal-50: #effcfa;
+  --teal-100: #ccfbf1;
+  --teal-200: #99f6e4;
+  --teal-300: #5eead4;
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e;
+  --teal-800: #115e59;
+
+  --gold-50: #fffbeb;
+  --gold-100: #fef3c7;
+  --gold-200: #fde68a;
+  --gold-300: #fcd34d;
+  --gold-400: #fbbf24;
+  --gold-500: #f59e0b;
+  --gold-600: #d97706;
+
+  --white: #ffffff;
+  --cream: #fffbf2;
+  --cream-2: #fff6e6;
+  --cream-3: #fdf1dc;
+
+  --ink: #1e1b2e;
+  --ink-2: #46415c;
+  --ink-3: #6b6584;
+  --ink-inv: #ffffff;
+
+  --line: rgba(30, 27, 46, 0.1);
+  --line-strong: rgba(30, 27, 46, 0.18);
+
+  --wa: #25d366;
+  --wa-dark: #0f7a4a;
+  --wa-ink: #06331f;
+
+  /* surfaces */
+  --bg: var(--cream);
+  --surface: var(--white);
+
+  /* animated page background -------------------------------------------- */
+  /* painted on the canvas (html) so the fixed orb layer above stays visible */
+  --bg-base: linear-gradient(180deg, #fffdf7 0%, #fffbf2 40%, #fdf2e2 100%);
+  --bg-orbs:
+    radial-gradient(34rem 34rem at 15% 16%, rgba(139, 92, 246, 0.42), transparent 62%),
+    radial-gradient(30rem 30rem at 87% 12%, rgba(20, 184, 166, 0.4), transparent 62%),
+    radial-gradient(32rem 32rem at 79% 86%, rgba(251, 191, 36, 0.46), transparent 60%),
+    radial-gradient(27rem 27rem at 9% 89%, rgba(124, 58, 237, 0.36), transparent 60%);
+  --bg-dots: radial-gradient(rgba(30, 27, 46, 0.055) 1px, transparent 1.3px);
+  --bg-dot-size: 22px;
+
+  /* gradients */
+  --grad-brand: linear-gradient(135deg, #7c3aed 0%, #5b21b6 52%, #3b0764 100%);
+  --grad-brand-soft: linear-gradient(140deg, #8b5cf6 0%, #6d28d9 100%);
+  --grad-fresh: linear-gradient(140deg, #14b8a6 0%, #0f766e 100%);
+  --grad-gold: linear-gradient(120deg, #fde68a 0%, #fbbf24 55%, #f59e0b 100%);
+  --grad-cream: linear-gradient(180deg, #fffbf2 0%, #fdf1dc 100%);
+  /* purple → turquoise → gold, used for the animated rails and underlines */
+  --grad-energy: linear-gradient(90deg, #7c3aed 0%, #14b8a6 38%, #fbbf24 68%, #8b5cf6 100%);
+
+  /* typography */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.0625rem;
+  --fs-lg: clamp(1.125rem, 0.4vw + 1.03rem, 1.3125rem);
+  --fs-xl: clamp(1.375rem, 1vw + 1.15rem, 1.75rem);
+  --fs-2xl: clamp(1.75rem, 2vw + 1.3rem, 2.5rem);
+  --fs-3xl: clamp(2.125rem, 3vw + 1.4rem, 3.375rem);
+  --fs-4xl: clamp(2.5rem, 4.2vw + 1.4rem, 4.25rem);
+
+  /* spacing */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --section-y: clamp(3.75rem, 7vw, 6.5rem);
+
+  --container: 76rem;
+  --container-narrow: 52rem;
+
+  /* radii + shadow */
+  --r-sm: 0.625rem;
+  --r-md: 1rem;
+  --r-lg: 1.5rem;
+  --r-xl: 2rem;
+  --r-pill: 999px;
+
+  --shadow-xs: 0 1px 2px rgba(30, 27, 46, 0.06);
+  --shadow-sm: 0 2px 10px rgba(46, 16, 101, 0.07);
+  --shadow-md: 0 14px 34px -18px rgba(46, 16, 101, 0.32);
+  --shadow-lg: 0 30px 60px -28px rgba(46, 16, 101, 0.42);
+  --shadow-brand: 0 18px 40px -18px rgba(109, 40, 217, 0.65);
+
+  --header-h: 4.75rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.5s;
+}

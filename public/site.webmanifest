@@ -1,0 +1,21 @@
+{
+  "name": "Hadassah Creations Concept",
+  "short_name": "Hadassah Creations",
+  "description": "Customised hotel amenities for hotels, guest houses and serviced apartments across Nigeria.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFBF2",
+  "theme_color": "#5B21B6",
+  "icons": [
+    {
+      "src": "/android-chrome-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

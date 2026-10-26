@@ -1,0 +1,25 @@
+{
+  "name": "hadassah-creations-concept",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Website for Hadassah Creations Concept — customised hotel amenities supplier in Ibadan, Nigeria.",
+  "scripts": {
+    "dev": "vite",
+    "images": "node scripts/process-images.mjs",
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "prebuild": "node scripts/process-images.mjs && node scripts/generate-sitemap.mjs",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "sharp": "^0.33.5",
+    "vite": "^5.4.11"
+  }
+}

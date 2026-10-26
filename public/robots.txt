@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# This site has no noindex sections; every page is intended to be crawled.
+# The enquiry form is a client-side helper and has no crawlable action.
+
+Sitemap: https://hadassahcreationsconcept.com/sitemap.xml
