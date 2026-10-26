@@ -150,6 +150,25 @@ JSON-LD in `index.html` once you have it.
 
 `vercel.json` is included: SPA rewrites (`/(.*) → /index.html`) plus immutable caching for images.
 
+#### Two `vercel.json` traps that fail silently
+
+Both of these caused deployments to produce **no output at all** — the Deployments list stayed
+empty and the domain returned `DEPLOYMENT_NOT_FOUND`, with no error visible on GitHub's side.
+Check here first if a Vercel deploy produces nothing.
+
+1. **`headers[].source` does not accept regex alternation.** Vercel rejects
+   `"/(favicon|apple-touch-icon).*"` with *"Header at index N has invalid `source` pattern"*.
+   Enumerate the paths explicitly instead. If the config is invalid, the only place the error
+   surfaces is the project-import screen or the build log — a push alone will not tell you.
+
+2. **Do not enable `cleanUrls` alongside the SPA rewrite.** `cleanUrls` redirects
+   `/index.html` → `/`, while the rewrite targets `/index.html`; the two cancel out. The result
+   is that static assets (`/robots.txt`, `/images/*`) return 200 but *every* app route
+   (`/products`, `/contact`, …) returns 404. It looks like a routing bug, but it is config.
+
+To force a rebuild without pushing, create a **Deploy Hook** under
+*Project → Settings → Git → Deploy Hooks* and `POST` to it.
+
 ### Netlify
 
 `netlify.toml` is included (`npm run build`, `publish = dist`, SPA rewrite `/* → /index.html`).
